@@ -1,0 +1,42 @@
+{
+  "name": "script-to-video",
+  "version": "1.0.0",
+  "description": "Turn a narration script + slides into a polished narrated video — supports PNGs, PowerPoint, and Google Slides with TTS, annotations, transitions, and QA",
+  "bin": {
+    "s2v": "./bin/s2v.js"
+  },
+  "main": "lib/build.js",
+  "scripts": {
+    "build": "s2v build",
+    "qa": "s2v qa",
+    "voices": "s2v voices",
+    "init": "s2v init"
+  },
+  "keywords": [
+    "video",
+    "tts",
+    "text-to-speech",
+    "ffmpeg",
+    "narration",
+    "slides",
+    "powerpoint",
+    "google-slides",
+    "screencast",
+    "demo",
+    "presentation"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "canvas": "^3.2.2",
+    "chalk": "^4.1.2",
+    "chokidar": "^4.0.3",
+    "commander": "^12.1.0",
+    "googleapis": "^148.0.0",
+    "js-yaml": "^4.1.0",
+    "ora": "^5.4.1",
+    "sharp": "^0.34.5"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
