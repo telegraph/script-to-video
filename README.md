@@ -341,15 +341,12 @@ s2v build examples/release-notes
 | en-US-JennyNeural | Female | American | Training, onboarding |
 | en-US-AriaNeural | Female | American | Marketing, announcements |
 | en-US-DavisNeural | Male | American | Technical deep-dives |
-| fr-FR-HenriNeural | Male | French | French content |
-| de-DE-ConradNeural | Male | German | German content |
-| es-ES-AlvaroNeural | Male | Spanish | Spanish content |
-| ja-JP-KeitaNeural | Male | Japanese | Japanese content |
-| zh-CN-YunxiNeural | Male | Mandarin | Chinese content |
-| hi-IN-MadhurNeural | Male | Hindi | Hindi content |
-| ar-SA-HamedNeural | Male | Arabic | Arabic content |
+| en-AU-WilliamNeural | Male | Australian | Relaxed, friendly |
+| en-AU-NatashaNeural | Female | Australian | Bright, clear |
+| en-IN-PrabhatNeural | Male | Indian | Clear articulation |
+| en-IN-NeerjaNeural | Female | Indian | Warm, professional |
 
-Run `s2v voices` for the full list of 400+ voices across 50+ languages.
+Run `s2v voices` for the full list or `s2v browse` to preview them live.
 
 ## Architecture
 
