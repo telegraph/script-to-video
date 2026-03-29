@@ -10,6 +10,8 @@ crf: 20
 slides_source: directory
 slides_dir: slides
 narration: narration.txt
+background_music: upbeat
+music_volume: 0.10
 qa_rules:
   forbidden_words: ["TODO", "FIXME", "WIP"]
   warn_words: ["hack", "workaround"]

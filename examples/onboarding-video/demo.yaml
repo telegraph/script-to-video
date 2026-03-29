@@ -10,3 +10,5 @@ crf: 18
 slides_source: directory
 slides_dir: slides
 narration: narration.txt
+background_music: calm
+music_volume: 0.10

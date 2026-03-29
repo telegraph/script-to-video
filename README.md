@@ -333,18 +333,24 @@ s2v build examples/release-notes
 
 ## Recommended Voices
 
-| Voice | Gender | Accent | Best For |
-|-------|--------|--------|----------|
-| en-GB-RyanNeural | Male | British | Professional demos (default) |
-| en-GB-SoniaNeural | Female | British | Executive presentations |
-| en-US-GuyNeural | Male | American | Casual tutorials |
-| en-US-JennyNeural | Female | American | Training, onboarding |
-| en-US-AriaNeural | Female | American | Marketing, announcements |
-| en-US-DavisNeural | Male | American | Technical deep-dives |
-| en-AU-WilliamNeural | Male | Australian | Relaxed, friendly |
-| en-AU-NatashaNeural | Female | Australian | Bright, clear |
-| en-IN-PrabhatNeural | Male | Indian | Clear articulation |
-| en-IN-NeerjaNeural | Female | Indian | Warm, professional |
+| Voice | Gender | Language | Best For |
+|-------|--------|----------|----------|
+| en-GB-RyanNeural | Male | English (UK) | Professional demos (default) |
+| en-GB-SoniaNeural | Female | English (UK) | Executive presentations |
+| en-US-GuyNeural | Male | English (US) | Casual tutorials |
+| en-US-JennyNeural | Female | English (US) | Training, onboarding |
+| en-US-AriaNeural | Female | English (US) | Marketing, announcements |
+| en-US-DavisNeural | Male | English (US) | Technical deep-dives |
+| en-AU-WilliamNeural | Male | English (AU) | Relaxed, friendly |
+| en-IN-PrabhatNeural | Male | English (IN) | Clear articulation |
+| es-ES-AlvaroNeural | Male | Spanish | Warm, engaging |
+| fr-FR-HenriNeural | Male | French | Smooth, natural |
+| de-DE-ConradNeural | Male | German | Clear, professional |
+| pt-BR-AntonioNeural | Male | Portuguese (BR) | Natural flow |
+| it-IT-DiegoNeural | Male | Italian | Warm, expressive |
+| ja-JP-KeitaNeural | Male | Japanese | Clear pronunciation |
+| zh-CN-YunxiNeural | Male | Chinese (CN) | Natural, authoritative |
+| ar-SA-HamedNeural | Male | Arabic | Formal, clear |
 
 Run `s2v voices` for the full list or `s2v browse` to preview them live.
 

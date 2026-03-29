@@ -10,4 +10,5 @@ crf: 18
 slides_source: directory
 slides_dir: slides
 narration: narration.txt
-callouts: callouts.json
+background_music: ambient
+music_volume: 0.12
