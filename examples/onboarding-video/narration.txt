@@ -1,0 +1,13 @@
+Welcome to your first day. This short video will walk you through everything you need to get started. By the end, you will know how to access your tools, find your team, and ship your first pull request.
+
+First, let's set up your development environment. Open the getting started guide in Confluence and follow the five steps. You will clone the monorepo, install dependencies, and run the local dev server. If anything fails, paste the error in the engineering help Slack channel and someone will respond within the hour.
+
+Next, find your team board. Every squad has a board in the project tracker. Your manager will have added you to the right one during pre-boarding. Open it now and look for any tickets tagged with good first issue. These are small, well-scoped tasks designed for new starters.
+
+Before you write any code, read the contribution guide in the repository root. It covers branch naming, commit message format, and the review process. The most important rule is to always include your ticket number in the pull request title. This links your work to the project tracker automatically.
+
+When your pull request is ready, request a review from your onboarding buddy. They will give you feedback within one business day. Once approved, you can merge it yourself. Congratulations, you have shipped your first change.
+
+Finally, here are some useful links. The engineering handbook covers our architecture and coding standards. The incident runbook explains what to do if something breaks in production. And the team wiki has meeting schedules, on-call rotations, and contact details for every squad.
+
+That is everything you need for day one. Remember, there are no silly questions. Use Slack, attend the daily standup, and do not be afraid to ask for help. Welcome to the team.

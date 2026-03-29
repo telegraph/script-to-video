@@ -1,0 +1,11 @@
+node_modules/
+**/output/chunks/
+**/output/slides-annotated/
+**/output/build-video.sh
+**/output/*.mp4
+**/output/*.srt
+**/output/*.vtt
+**/output/*-thumb.png
+**/output/_pptx-export/
+.DS_Store
+*.log
