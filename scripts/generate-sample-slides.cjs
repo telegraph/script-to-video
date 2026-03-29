@@ -20,6 +20,7 @@ const COLOUR_SCHEMES = {
   'product-tour':     { bg: '#0f172a', accent: '#38bdf8', text: '#f8fafc', subtitle: '#94a3b8' },
   'onboarding-video': { bg: '#1e1b4b', accent: '#a78bfa', text: '#f8fafc', subtitle: '#c4b5fd' },
   'release-notes':    { bg: '#022c22', accent: '#34d399', text: '#f0fdf4', subtitle: '#86efac' },
+  'how-to-use':       { bg: '#18181b', accent: '#f59e0b', text: '#fafafa', subtitle: '#a1a1aa' },
 };
 
 function createSlide(width, height, opts) {

@@ -1,0 +1,19 @@
+Script to Video. A complete guide to building narrated videos from your slides and a text script. This tool handles text to speech, slide transitions, callout annotations, and quality checks, all from the command line.
+
+Getting started is simple. Install the tool globally with npm, then run s2v init followed by your project name. This creates a folder with a demo dot yaml config file, a narration dot txt template, a callouts dot json for annotations, and a slides directory where you drop your images.
+
+The narration file is the heart of the tool. Each paragraph becomes one slide in your video. Write naturally, as if you are presenting to a colleague. Avoid abbreviations like A P I or P R, and spell out percentages. The tool automatically preprocesses your text for cleaner speech synthesis.
+
+Now let's talk about voices. The tool supports over four hundred voices across fifty languages through Microsoft Edge text to speech. Run s2v voices to browse them. For English, we recommend Ryan Neural for professional demos, Jenny Neural for training videos, and Guy Neural for casual walkthroughs. Each voice can be tuned with rate and pitch. Set rate to minus ten percent for slower, more deliberate narration, or plus twenty percent for a faster pace.
+
+Slide transitions control how one slide moves to the next. The default is a simple cross fade, but you have over forty-five options. Run s2v transitions to see them all. Popular choices include wipe left for sequential content, dissolve for a subtle professional feel, smooth left for modern presentations, and circle open for dramatic reveals. Set the transition in your demo dot yaml or override it with the dash dash transition flag.
+
+Callout annotations let you highlight specific regions on your slides. Create a callouts dot json file with an array of objects. Each object specifies the slide number, a label, and the x, y, width, and height of the highlight rectangle. The tool renders a golden highlight box with a label pill on top. This is perfect for drawing attention to buttons, metrics, or features in your screenshots.
+
+Quality assurance runs automatically before every build. The Q A framework checks that your slide count matches your narration paragraphs, that no slides are suspiciously small, that your text avoids common T T S pitfalls, and that your callout coordinates are within bounds. You can add custom rules in demo dot yaml to forbid specific words or flag terminology that should not appear in your videos.
+
+Importing slides is flexible. The simplest approach is dropping P N G files into the slides directory. But you can also point to a PowerPoint file and the tool converts each slide automatically using Libre Office. Or set your slides source to Google Slides with a presentation I D, and the tool exports each slide as an image via the Google Slides A P I.
+
+Extra features round out the toolkit. Add dash dash subtitles to generate S R T and web V T T subtitle files synced to your narration. Add dash dash thumbnail to extract a poster frame from slide one. Use dash dash watch to automatically rebuild whenever you change your narration or slides. And the T T S audio is cached, so unchanged paragraphs are skipped on rebuild, making iteration fast.
+
+That is script to video. Install it, scaffold a project, write your narration, drop in your slides, and run s2v build. You will have a polished, narrated video in minutes. Check the readme and examples directory for more.

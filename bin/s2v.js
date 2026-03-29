@@ -46,6 +46,8 @@ program
   .option('--skip-qa', 'Skip QA validation before build')
   .option('--subtitles', 'Generate .srt/.vtt alongside video')
   .option('--thumbnail', 'Extract poster frame from slide 1')
+  .option('-m, --music <path>', 'Background music file (mp3/wav)')
+  .option('--music-volume <number>', 'Background music volume 0.0–1.0 (default: 0.15)', parseFloat)
   .option('-o, --output <path>', 'Output file path')
   .option('-w, --watch', 'Watch for changes and rebuild automatically')
   .action(async (dir, opts) => {

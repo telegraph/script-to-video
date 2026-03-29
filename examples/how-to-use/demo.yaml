@@ -1,0 +1,13 @@
+name: how-to-use
+resolution: 1920x1080
+voice: en-GB-RyanNeural
+rate: "-5%"
+pitch: "-2Hz"
+transition: fade
+transition_duration: 0.4
+tail_silence: 3.0
+crf: 18
+slides_source: directory
+slides_dir: slides
+narration: narration.txt
+callouts: callouts.json
