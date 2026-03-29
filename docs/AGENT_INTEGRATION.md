@@ -86,6 +86,20 @@ pip install edge-tts
 brew install ffmpeg  # or apt install ffmpeg
 ```
 
+For Google Doc/Slides/Drive access (all authenticated, no public sharing):
+
+```bash
+# Option 1: ADC — easiest, opens browser to authenticate with your Google account
+gcloud auth application-default login
+
+# Option 2: Service account (CI/CD, shared environments)
+export GOOGLE_APPLICATION_CREDENTIALS="/path/to/service-account.json"
+# Share the doc/folder with the service account email
+
+# Option 3: API key
+export GOOGLE_API_KEY="your-api-key"
+```
+
 ## Example: agent creates a video
 
 An agent receiving "create a demo video for our new search feature" would:

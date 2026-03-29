@@ -1,6 +1,6 @@
 Script to Video. The fastest way to turn a narration script and slides into a polished, narrated video. No video editing software required, just a command line.
 
-The easiest way to start is from a Google Doc. Write your narration in a Google Doc, share it as anyone with the link can view, then run s2v from doc with the URL. The tool pulls the text, splits it into paragraphs, and creates a ready-to-build project. Point it at a folder of screenshots and you are done.
+The easiest way to start is from a Google Doc. Write your narration in a Google Doc, then run s2v from doc with the URL. The tool authenticates via a service account, pulls the text, splits it into paragraphs, and creates a ready-to-build project. Point it at a folder of screenshots and you are done. All access is private, no public sharing needed.
 
 You can also point to a Google Slides presentation or a PowerPoint file instead of individual images. Set slides source to google slides or pptx in your demo dot yaml, and the tool exports each slide as an image automatically. No manual screenshot work needed.
 

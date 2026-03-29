@@ -130,7 +130,7 @@ Run `npx s2v transitions` for all 45+.
 If the user points you to a Google Doc (narration) and/or a folder of slides:
 
 ```bash
-# Google Doc → video project (doc must be shared as "Anyone with link can view")
+# Google Doc → video project (requires: gcloud auth application-default login)
 npx s2v from-doc "https://docs.google.com/document/d/DOC_ID/edit" \
   --name my-video \
   --voice en-US-JennyNeural \
