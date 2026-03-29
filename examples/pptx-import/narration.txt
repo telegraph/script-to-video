@@ -1,7 +1,0 @@
-This example shows how to build a video from a PowerPoint presentation. Instead of manually exporting slides as images, script-to-video converts your presentation file automatically using LibreOffice.
-
-To use this feature, set slides source to pptx in your demo dot yaml and specify your PowerPoint file name. When you run the build command, the tool will convert each slide to a high-resolution image before generating the video.
-
-The conversion supports all standard PowerPoint features including shapes, charts, images, and text formatting. Animations are not supported since each slide becomes a static image, but transitions between slides are handled by the video pipeline.
-
-Place your presentation dot pptx file in this directory and run s2v build to see it in action. The tool will create one image per slide, generate narration audio for each paragraph, and assemble everything into a polished video.
