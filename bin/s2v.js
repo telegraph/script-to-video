@@ -179,4 +179,20 @@ program
     await browse(opts);
   });
 
+// ── from-doc ─────────────────────────────────────────────────────────────────
+
+program
+  .command('from-doc [url]')
+  .description('Create a video project from a Google Doc URL (narration) + optional slides')
+  .option('--name <name>', 'Project directory name', 'from-doc-video')
+  .option('--slides <path-or-url>', 'Local folder or Google Drive folder URL for slide images')
+  .option('-v, --voice <name>', 'Edge TTS voice')
+  .option('-t, --transition <type>', 'Transition type')
+  .option('-m, --music <preset>', 'Background music preset or file')
+  .option('--music-volume <number>', 'Music volume 0.0-1.0', parseFloat)
+  .action(async (url, opts) => {
+    const { fromDoc } = require('../lib/from-doc');
+    await fromDoc(url, opts);
+  });
+
 program.parse();

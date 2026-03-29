@@ -26,6 +26,16 @@
     "presentation"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/telegraph/script-to-video.git"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "README.md",
+    "LICENSE"
+  ],
   "dependencies": {
     "canvas": "^3.2.2",
     "chalk": "^4.1.2",
