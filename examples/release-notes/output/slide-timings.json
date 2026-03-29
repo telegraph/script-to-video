@@ -1,0 +1,44 @@
+[
+  {
+    "slide": 0,
+    "chunk": "p00.wav",
+    "audio_duration": 11.184014,
+    "slide_duration": 11.784013999999999
+  },
+  {
+    "slide": 1,
+    "chunk": "p01.wav",
+    "audio_duration": 18.264014,
+    "slide_duration": 18.864014
+  },
+  {
+    "slide": 2,
+    "chunk": "p02.wav",
+    "audio_duration": 18.552018,
+    "slide_duration": 19.152018
+  },
+  {
+    "slide": 3,
+    "chunk": "p03.wav",
+    "audio_duration": 21.936009,
+    "slide_duration": 22.536009
+  },
+  {
+    "slide": 4,
+    "chunk": "p04.wav",
+    "audio_duration": 18.816009,
+    "slide_duration": 19.416009000000003
+  },
+  {
+    "slide": 5,
+    "chunk": "p05.wav",
+    "audio_duration": 15.144014,
+    "slide_duration": 15.744014
+  },
+  {
+    "slide": 6,
+    "chunk": "p06.wav",
+    "audio_duration": 12.624014,
+    "slide_duration": 15.224014
+  }
+]

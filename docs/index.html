@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>script-to-video — Demo Gallery</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --surface: #1e293b;
+      --border: #334155;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --green: #34d399;
+      --purple: #a78bfa;
+      --amber: #fbbf24;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+    /* Hero */
+    .hero {
+      text-align: center;
+      padding: 80px 0 60px;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 16px; }
+    .hero h1 span { color: var(--accent); }
+    .hero p { font-size: 1.2rem; color: var(--muted); max-width: 600px; margin: 0 auto 32px; }
+    .hero-flow {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 32px;
+      display: inline-block;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 1rem;
+      color: var(--green);
+    }
+    .hero-flow .arrow { color: var(--accent); margin: 0 8px; }
+
+    /* How it works */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      padding: 60px 0;
+    }
+    .step {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+    }
+    .step-num {
+      display: inline-block;
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: var(--bg);
+      font-weight: 800;
+      text-align: center;
+      line-height: 36px;
+      margin-bottom: 12px;
+    }
+    .step h3 { font-size: 1.1rem; margin-bottom: 8px; }
+    .step p { color: var(--muted); font-size: 0.9rem; }
+
+    /* Section headers */
+    .section-header {
+      text-align: center;
+      padding: 60px 0 32px;
+      border-top: 1px solid var(--border);
+    }
+    .section-header h2 { font-size: 1.8rem; margin-bottom: 8px; }
+    .section-header p { color: var(--muted); }
+
+    /* Video cards */
+    .videos { display: grid; gap: 40px; padding-bottom: 60px; }
+    .video-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .video-card video {
+      width: 100%;
+      display: block;
+      border-bottom: 1px solid var(--border);
+    }
+    .video-info { padding: 24px 28px; }
+    .video-info h3 { font-size: 1.3rem; margin-bottom: 8px; }
+    .video-info p { color: var(--muted); margin-bottom: 16px; }
+    .video-meta {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    .badge-voice { background: rgba(56,189,248,0.15); color: var(--accent); }
+    .badge-transition { background: rgba(167,139,250,0.15); color: var(--purple); }
+    .badge-duration { background: rgba(52,211,153,0.15); color: var(--green); }
+    .badge-feature { background: rgba(251,191,36,0.15); color: var(--amber); }
+
+    /* Config preview */
+    .config-block {
+      margin-top: 16px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 0.85rem;
+      color: var(--muted);
+      white-space: pre;
+      overflow-x: auto;
+    }
+    .config-block .key { color: var(--accent); }
+    .config-block .val { color: var(--green); }
+    .config-block .comment { color: #475569; }
+
+    /* Voice table */
+    .voice-section { padding-bottom: 60px; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--surface);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    th {
+      text-align: left;
+      padding: 12px 16px;
+      background: var(--bg);
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    td {
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.9rem;
+    }
+    tr:last-child td { border-bottom: none; }
+    td:first-child { font-family: 'SF Mono', 'Fira Code', monospace; color: var(--green); }
+
+    /* Quick start */
+    .quickstart {
+      padding: 60px 0;
+      border-top: 1px solid var(--border);
+    }
+    .quickstart h2 { text-align: center; margin-bottom: 32px; }
+    .code-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 0.9rem;
+      overflow-x: auto;
+      line-height: 1.8;
+    }
+    .code-block .prompt { color: var(--accent); }
+    .code-block .cmd { color: var(--text); }
+    .code-block .comment { color: #475569; }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 40px 0;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 768px) {
+      .steps { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 1.8rem; }
+      .hero-flow { font-size: 0.85rem; padding: 16px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1><span>script</span>-to-<span>video</span></h1>
+      <p>Turn a narration script + slides into a polished narrated video with text-to-speech, transitions, and annotations.</p>
+      <div class="hero-flow">
+        narration.txt + slides/ <span class="arrow">&#8594;</span> s2v build <span class="arrow">&#8594;</span> video.mp4
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <div class="container">
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Write your script</h3>
+        <p>One paragraph per slide in <code>narration.txt</code>. Write naturally, as if presenting to a colleague.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Add your slides</h3>
+        <p>Drop PNGs into <code>slides/</code>, or point to a PowerPoint file or Google Slides deck.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Run <code>s2v build</code></h3>
+        <p>TTS narration, callout annotations, xfade transitions, QA validation &#8212; all automatic.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sample Videos -->
+  <div class="container">
+    <div class="section-header">
+      <h2>Sample Videos</h2>
+      <p>Built with <code>s2v build</code> from the example projects included in the repo. Press play to preview.</p>
+    </div>
+
+    <div class="videos">
+
+      <!-- Product Tour -->
+      <div class="video-card">
+        <video controls preload="metadata" poster="thumbnails/product-tour-thumb.png">
+          <source src="videos/product-tour.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-info">
+          <h3>Product Tour</h3>
+          <p>A 7-slide product walkthrough with callout annotations highlighting key UI elements. Uses the default British male voice with fade transitions.</p>
+          <div class="video-meta">
+            <span class="badge badge-voice">en-GB-RyanNeural</span>
+            <span class="badge badge-transition">fade</span>
+            <span class="badge badge-duration">~2 min</span>
+            <span class="badge badge-feature">callouts</span>
+          </div>
+          <div class="config-block"><span class="comment"># demo.yaml</span>
+<span class="key">voice:</span> <span class="val">en-GB-RyanNeural</span>
+<span class="key">transition:</span> <span class="val">fade</span>
+<span class="key">callouts:</span> <span class="val">callouts.json</span></div>
+        </div>
+      </div>
+
+      <!-- Onboarding -->
+      <div class="video-card">
+        <video controls preload="metadata" poster="thumbnails/onboarding-video-thumb.png">
+          <source src="videos/onboarding-video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-info">
+          <h3>Employee Onboarding</h3>
+          <p>A 7-slide onboarding guide for new starters. Uses an American female voice with wipe-left transitions for a sequential feel.</p>
+          <div class="video-meta">
+            <span class="badge badge-voice">en-US-JennyNeural</span>
+            <span class="badge badge-transition">wipeleft</span>
+            <span class="badge badge-duration">~3 min</span>
+          </div>
+          <div class="config-block"><span class="comment"># demo.yaml</span>
+<span class="key">voice:</span> <span class="val">en-US-JennyNeural</span>
+<span class="key">transition:</span> <span class="val">wipeleft</span>
+<span class="key">transition_duration:</span> <span class="val">0.5</span></div>
+        </div>
+      </div>
+
+      <!-- Release Notes -->
+      <div class="video-card">
+        <video controls preload="metadata" poster="thumbnails/release-notes-thumb.png">
+          <source src="videos/release-notes.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-info">
+          <h3>Release Notes</h3>
+          <p>A 7-slide release announcement with dissolve transitions and custom QA rules that catch "TODO" and "FIXME" in the narration.</p>
+          <div class="video-meta">
+            <span class="badge badge-voice">en-US-GuyNeural</span>
+            <span class="badge badge-transition">dissolve</span>
+            <span class="badge badge-duration">~2.5 min</span>
+            <span class="badge badge-feature">custom QA rules</span>
+          </div>
+          <div class="config-block"><span class="comment"># demo.yaml</span>
+<span class="key">voice:</span> <span class="val">en-US-GuyNeural</span>
+<span class="key">transition:</span> <span class="val">dissolve</span>
+<span class="key">qa_rules:</span>
+  <span class="key">forbidden_words:</span> <span class="val">["TODO", "FIXME", "WIP"]</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Voices -->
+  <div class="container voice-section">
+    <div class="section-header">
+      <h2>Recommended Voices</h2>
+      <p>400+ voices available across 50+ languages. Run <code>s2v voices</code> for the full list.</p>
+    </div>
+    <table>
+      <thead>
+        <tr><th>Voice</th><th>Gender</th><th>Language</th><th>Best For</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>en-GB-RyanNeural</td><td>Male</td><td>English (UK)</td><td>Professional demos, product tours</td></tr>
+        <tr><td>en-GB-SoniaNeural</td><td>Female</td><td>English (UK)</td><td>Presentations, executive briefings</td></tr>
+        <tr><td>en-US-GuyNeural</td><td>Male</td><td>English (US)</td><td>Casual walkthroughs, tutorials</td></tr>
+        <tr><td>en-US-JennyNeural</td><td>Female</td><td>English (US)</td><td>Training videos, onboarding</td></tr>
+        <tr><td>en-US-AriaNeural</td><td>Female</td><td>English (US)</td><td>Marketing videos, announcements</td></tr>
+        <tr><td>en-US-DavisNeural</td><td>Male</td><td>English (US)</td><td>Technical deep-dives</td></tr>
+        <tr><td>fr-FR-HenriNeural</td><td>Male</td><td>French</td><td>French-language content</td></tr>
+        <tr><td>de-DE-ConradNeural</td><td>Male</td><td>German</td><td>German-language content</td></tr>
+        <tr><td>es-ES-AlvaroNeural</td><td>Male</td><td>Spanish</td><td>Spanish-language content</td></tr>
+        <tr><td>ja-JP-KeitaNeural</td><td>Male</td><td>Japanese</td><td>Japanese-language content</td></tr>
+        <tr><td>zh-CN-YunxiNeural</td><td>Male</td><td>Chinese (CN)</td><td>Chinese-language content</td></tr>
+        <tr><td>hi-IN-MadhurNeural</td><td>Male</td><td>Hindi</td><td>Hindi-language content</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Quick Start -->
+  <div class="container quickstart">
+    <h2>Quick Start</h2>
+    <div class="code-block">
+<span class="comment"># Install</span>
+<span class="prompt">$</span> <span class="cmd">npm install -g script-to-video</span>
+
+<span class="comment"># Scaffold a new project</span>
+<span class="prompt">$</span> <span class="cmd">s2v init my-video</span>
+
+<span class="comment"># Add your slides to my-video/slides/</span>
+<span class="comment"># Edit my-video/narration.txt (one paragraph per slide)</span>
+
+<span class="comment"># Build the video</span>
+<span class="prompt">$</span> <span class="cmd">s2v build my-video</span>
+
+<span class="comment"># With extras</span>
+<span class="prompt">$</span> <span class="cmd">s2v build my-video --subtitles --thumbnail --watch</span>
+
+<span class="comment"># Browse voices and transitions</span>
+<span class="prompt">$</span> <span class="cmd">s2v voices --lang en</span>
+<span class="prompt">$</span> <span class="cmd">s2v transitions</span>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>
+        <a href="https://github.com/telegraph/script-to-video">GitHub</a> &middot;
+        <a href="https://github.com/telegraph/script-to-video/tree/main/examples">Examples</a> &middot;
+        <a href="https://github.com/telegraph/script-to-video/blob/main/README.md">Documentation</a>
+      </p>
+      <p style="margin-top: 8px;">Built by the SRE Platforms team</p>
+    </div>
+  </footer>
+
+</body>
+</html>
