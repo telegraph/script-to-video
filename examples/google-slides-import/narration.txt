@@ -1,0 +1,7 @@
+This example demonstrates importing slides directly from Google Slides. Instead of downloading and converting your presentation manually, the tool exports each slide as a high-resolution image using the Google Slides API.
+
+To set this up, copy your presentation ID from the Google Slides URL. It is the long string between d slash and slash edit. Paste it into the slides id field in demo dot yaml.
+
+You will also need to set up authentication. Either set a Google Slides API key as an environment variable, or configure a service account with read access to the presentation. The presentation must be shared with the service account email address.
+
+Once configured, run s2v build and the tool will fetch each slide, convert it to an image, generate narration, and assemble the final video. Any updates you make in Google Slides will be picked up on the next build.

@@ -1,0 +1,15 @@
+name: release-notes
+resolution: 1680x1050
+voice: en-US-GuyNeural
+rate: "-2%"
+pitch: "0Hz"
+transition: dissolve
+transition_duration: 0.6
+tail_silence: 2.0
+crf: 20
+slides_source: directory
+slides_dir: slides
+narration: narration.txt
+qa_rules:
+  forbidden_words: ["TODO", "FIXME", "WIP"]
+  warn_words: ["hack", "workaround"]

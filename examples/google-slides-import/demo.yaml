@@ -1,0 +1,12 @@
+name: google-slides-demo
+resolution: 1920x1080
+voice: en-US-AriaNeural
+rate: "-3%"
+pitch: "0Hz"
+transition: fade
+transition_duration: 0.4
+tail_silence: 3.0
+crf: 20
+slides_source: google-slides
+slides_id: YOUR_PRESENTATION_ID_HERE
+narration: narration.txt

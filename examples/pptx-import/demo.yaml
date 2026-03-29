@@ -1,0 +1,12 @@
+name: pptx-import-demo
+resolution: 1920x1080
+voice: en-GB-SoniaNeural
+rate: "-4%"
+pitch: "-1Hz"
+transition: smoothleft
+transition_duration: 0.5
+tail_silence: 3.0
+crf: 20
+slides_source: pptx
+slides_file: presentation.pptx
+narration: narration.txt
