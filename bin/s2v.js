@@ -156,4 +156,27 @@ program
     listTransitions();
   });
 
+// ── music ────────────────────────────────────────────────────────────────────
+
+program
+  .command('music [action] [preset]')
+  .description('List, preview, or generate built-in background music tracks')
+  .option('-d, --duration <seconds>', 'Duration in seconds', parseInt)
+  .option('-o, --output <path>', 'Output file path')
+  .action(async (action, preset, opts) => {
+    const { music } = require('../lib/music');
+    await music(action, preset, opts);
+  });
+
+// ── browse ───────────────────────────────────────────────────────────────────
+
+program
+  .command('browse')
+  .description('Open a local web UI to preview voices, music, and transitions')
+  .option('--port <number>', 'Server port', parseInt)
+  .action(async (opts) => {
+    const { browse } = require('../lib/browse');
+    await browse(opts);
+  });
+
 program.parse();
