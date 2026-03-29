@@ -2,67 +2,67 @@
   {
     "slide": 0,
     "chunk": "p00.wav",
-    "audio_duration": 12.528005,
-    "slide_duration": 12.928005
+    "audio_duration": 14.976009,
+    "slide_duration": 15.376009
   },
   {
     "slide": 1,
     "chunk": "p01.wav",
-    "audio_duration": 24.576009,
-    "slide_duration": 24.976008999999998
+    "audio_duration": 28.896009,
+    "slide_duration": 29.296008999999998
   },
   {
     "slide": 2,
     "chunk": "p02.wav",
-    "audio_duration": 18.216009,
-    "slide_duration": 18.616009
+    "audio_duration": 26.136009,
+    "slide_duration": 26.536009
   },
   {
     "slide": 3,
     "chunk": "p03.wav",
-    "audio_duration": 21.312018,
-    "slide_duration": 21.712017999999997
+    "audio_duration": 22.056009,
+    "slide_duration": 22.456008999999998
   },
   {
     "slide": 4,
     "chunk": "p04.wav",
-    "audio_duration": 34.416009,
-    "slide_duration": 34.816009
+    "audio_duration": 18.96,
+    "slide_duration": 19.36
   },
   {
     "slide": 5,
     "chunk": "p05.wav",
-    "audio_duration": 27.552018,
-    "slide_duration": 27.952018
+    "audio_duration": 22.776009,
+    "slide_duration": 23.176008999999997
   },
   {
     "slide": 6,
     "chunk": "p06.wav",
-    "audio_duration": 31.992018,
-    "slide_duration": 32.392018
+    "audio_duration": 31.8,
+    "slide_duration": 32.2
   },
   {
     "slide": 7,
     "chunk": "p07.wav",
-    "audio_duration": 19.608005,
-    "slide_duration": 20.008004999999997
+    "audio_duration": 24.504014,
+    "slide_duration": 24.904014
   },
   {
     "slide": 8,
     "chunk": "p08.wav",
-    "audio_duration": 27.264014,
-    "slide_duration": 27.664013999999998
+    "audio_duration": 25.584014,
+    "slide_duration": 25.984014
   },
   {
     "slide": 9,
     "chunk": "p09.wav",
-    "audio_duration": 27.264014,
-    "slide_duration": 27.664013999999998
+    "audio_duration": 20.136009,
+    "slide_duration": 20.536009
   },
   {
     "slide": 10,
     "chunk": "p10.wav",
-    "audio_duration": 18.744014,
-    "slide_duration": 22.144014
+    "audio_duration": 25.824014,
+    "slide_duration": 29.224013999999997
   }
 ]
